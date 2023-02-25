@@ -1,3 +1,21 @@
+//this is for when we refresh the webpage using get old data will also store on network//
+window.addEventListener("DOMContentLoaded",()=>{
+    axios.get("https://crudcrud.com/api/718441bfcf1f41ae838b24722405ef85/student_details")
+    .then((response)=>{
+        console.log(response);
+        for(let i=0;i<response.length;i++){
+        console.log(response.data[i]);
+        }
+        
+
+
+    }).catch((err)=>{
+        console.log(err);
+    })
+})
+
+
+
 document.getElementById("newform").addEventListener("submit",forms);
 //for deleting list when  i click on delete button//
 let deletlist=document.getElementById("list");
